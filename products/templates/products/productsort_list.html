@@ -4,6 +4,7 @@
 	<div class="container">
 	<ol>
 	{% for product in productsort_list%}
+	 	<img src="{{product.products_image.url}}" alt="">
 	<h2><li>{{product.products_sort}}</li></h2>
 	{% endfor %}
 	

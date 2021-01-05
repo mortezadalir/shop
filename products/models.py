@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class ProductSort(models.Model):
     products_sort=models.CharField(max_length=256)
+    products_image=models.ImageField(upload_to='image')
     
     def __str__(self):
         return self.products_sort
