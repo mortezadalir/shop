@@ -1,18 +1,38 @@
 {% extends 'products/BASE.html' %}
 	{% block body_block %}
-    <h1> Products: </h1>
-	<div class="container">
-	<ol>
+	<div class="header">
+		<h1> Products: </h1>
+	</div>
+
+
+
 	{% for product in productsort_list%}
-	 	<img src="{{product.products_image.url}}" alt="">
-	<h2><li>{{product.products_sort}}</li></h2>
+	<div class="row card">
+  <div class="column">
+		<img   src="{{product.products_image.url}}" alt="Card image cap">
+		<div class="card-body">
+			<h3 class="card-text">{{product.products_sort}}</h3>
+  </div>
+
+</div>
+</div>
+	<!-- <div class="card " >
+		<div class="row">
+			<img   src="{{product.products_image.url}}" alt="Card image cap">
+			<div class="card-body">
+				<h3 class="card-text">{{product.products_sort}}</h3>
+			</div>
+		</div>
+
+</div> -->
+
+
 	{% endfor %}
-	
+
 
 
 	</ol>
 	</div>
-	
-	
-	{% endblock %}
 
+
+	{% endblock %}
