@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 {% extends 'products/BASE.html' %}
 	{% block body_block %}
 	<div class="header">
 		<h1> Products: </h1>
 	</div>
-
-
 
 	{% for product in productsort_list%}
 	<div class="row card">
@@ -17,63 +14,7 @@
 
 </div>
 </div>
-	<!-- <div class="card " >
-		<div class="row">
-			<img   src="{{product.products_image.url}}" alt="Card image cap">
-			<div class="card-body">
-				<h3 class="card-text">{{product.products_sort}}</h3>
-			</div>
-		</div>
-
-</div> -->
-
 
 	{% endfor %}
 
-
-
-	</ol>
-	</div>
-
-
 	{% endblock %}
-=======
-{% extends 'products/BASE.html' %}
-	{% block body_block %}
-	<div class="header">
-		<h1> Products: </h1>
-	</div>
-
-
-
-	{% for product in productsort_list%}
-	<div class="row card">
-  <div class="column">
-		<img   src="{{product.products_image.url}}" alt="Card image cap">
-		<div class="card-body">
-			<h3 class="card-text">{{product.products_sort}}</h3>
-  </div>
-
-</div>
-</div>
-	<!-- <div class="card " >
-		<div class="row">
-			<img   src="{{product.products_image.url}}" alt="Card image cap">
-			<div class="card-body">
-				<h3 class="card-text">{{product.products_sort}}</h3>
-			</div>
-		</div>
-
-</div> -->
-
-
-	{% endfor %}
-
-
-
-	</ol>
-	</div>
-
-
-	{% endblock %}
->>>>>>> d24e1423ac811b95e7795e385a3f2381ab0cb5d4
