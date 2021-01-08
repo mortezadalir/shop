@@ -1,0 +1,22 @@
+{% extends 'products/BASE.html'%}
+
+{% block body_block %}
+
+  {% if registered %}
+      <h1>Thank you for registering</h1>
+   {% else %}
+    <h1>please rgister here:</h1>
+    <h2>Fill out the Form:</h2>
+     <div class="container">
+     <form  method="post">
+
+      {{forms.as_p}}
+      {% csrf_token %}
+
+      <input type="submit" name="" value="Submit">
+  </form>
+  </div>
+  {% endif %}
+
+
+{% endblock %}

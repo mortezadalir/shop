@@ -24,6 +24,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^$',views.IndexView.as_view()),
     url(r'^admin/', admin.site.urls),
-    url(r'products',include('products.urls'))
-   
+    url(r'^products',include('products.urls')),
+    url(r'^register',views.user_register,name="register"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
