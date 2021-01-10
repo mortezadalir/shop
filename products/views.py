@@ -48,13 +48,16 @@ def user_register(request):
 def user_login(request):
 
     if request.method=="POST":
-        username=request.POST.get('username')
-        password=request.POST.get('password')
+        username=request.POST.get('login_username')
+        password=request.POST.get('login_password')
 
         user=authenticate(username=username,password=password)
+        print(user)
 
         if user:
+            print(user.is_active)
             if user.is_active:
+                print("helloo")
                 login(request,user)
                 return HttpResponseRedirect(reverse('index'))
 

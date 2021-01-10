@@ -1,18 +1,22 @@
 {% extends 'products/BASE.html' %}
+{% load static%}
 	{% block body_block %}
+	<link rel="stylesheet"  href="{% static "css/product_list.css" %}" >
 	<div class="header">
 		<h1> Products: </h1>
+
+
 	</div>
 
 	{% for product in productsort_list%}
-	<div class="row card">
-  <div class="column">
+	<div class="card">
+
 		<img   src="{{product.products_image.url}}" alt="Card image cap">
 		<div class="card-body">
 			<h3 class="card-text">{{product.products_sort}}</h3>
   </div>
 
-</div>
+
 </div>
 
 	{% endfor %}

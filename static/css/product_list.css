@@ -1,0 +1,18 @@
+.card{
+  margin: 20px 50px 20px 20px;
+	float:left;
+	width: 400px;
+	height: 300px;
+	text-align: center;
+	font-family: Veranda;
+
+}
+
+
+
+
+img{
+	align-items: center;
+	width: 400px;
+	height: 200px;
+}
