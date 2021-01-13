@@ -14,3 +14,4 @@ class Products(models.Model):
     products_name=models.CharField(max_length=256)
     products_sort=models.ForeignKey(ProductSort,related_name="prod_Sort")
     products_price=models.DecimalField(max_digits=6, decimal_places=2)
+    prod_image=models.ImageField(upload_to='products')

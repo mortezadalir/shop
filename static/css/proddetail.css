@@ -16,8 +16,14 @@ img{
 	width: 400px;
 	height: 200px;
 }
-#basket_icon{
-  width:40px;
-  height:40px;
 
+
+#buy_button{
+	width: 80px;
+	height: 40px;
+	/* margin: 15px 15px 30px 30px; */
+	font-size: 20px;
+	background: #eb318e;
+	border-radius: 10px;
+	border: 1px solid black;
 }

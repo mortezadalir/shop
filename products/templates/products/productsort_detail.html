@@ -1,0 +1,25 @@
+{% extends "products/BASE.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href={% static "css/proddetail.css" %}>
+
+    {% for prod in productsort.prod_Sort.all %}
+
+    <div class="card ">
+      <img   src="{{prod.prod_image.url}}" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-text">{{prod.products_name}}  {{prod.products_price}}$
+
+      <br> <form  method="post">
+        {% csrf_token %}
+        <input id="buy_button" type="submit" name="buy_button" value="Buy">
+      </form>
+        </h3>
+    </div>
+
+    </div>
+
+
+    {% endfor %}
+
+{% endblock %}

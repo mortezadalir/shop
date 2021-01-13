@@ -25,20 +25,34 @@
           <li class="nav-item" >
           <a style="color:white;font-size: 20px;"  class="nav-link" href="{% url 'register' %}">Register</a>
         </li>
+
+		        <li class="nav-item" >
+          <a style="color:white;font-size: 20px;"  class="nav-link" href="#">About</a>
+        </li>
+
+
+      </ul>
+      <ul class="navbar-nav">
         {% if user.is_authenticated %}
+            <li  class="nav-item">
+              <a style="color:white;font-size: 20px;"  class="nav-link" href="#" >{{user}}</a>
+           </li>
             <li class="nav-item" >
-               <a style="color:white;font-size: 20px;"  class="nav-link" href="{% url 'logout' %}">Logout</a>
+               <a style="color:white;font-size: 20px;"  class="nav-link" href="{% url 'logout' %}" >Logout</a>
              </li>
+
         {% else %}
             <li class="nav-item" >
             <a style="color:white;font-size: 20px;"  class="nav-link" href="{% url 'user_login' %}">Login</a>
            </li>
         {% endif %}
-		        <li class="nav-item" >
-          <a style="color:white;font-size: 20px;"  class="nav-link" href="#">About</a>
+        <li class="nav-item" >
+          <img id="basket_icon" style="width:40px; height:40px;"  src="{% static "basket_icon/download5.png" %}" alt="">
         </li>
 
-      </ul>
+</ul>
+
+
 
 </div>
 </nav>

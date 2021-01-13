@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, TemplateView
+from django.views.generic import ListView, TemplateView, DetailView
 from products.models import ProductSort
 from products.forms import UserForm
 from django.http import HttpResponse
@@ -19,6 +19,16 @@ class IndexView(TemplateView):
 
 class ProductlistView(ListView):
     model= ProductSort
+
+class DetailProdcutView(DetailView):
+    model=ProductSort
+    def get_context_data(self, **kwargs):
+        context = super(Detail, self).get_context_data(**kwargs)
+        context['form'] = DetailForm
+        return context
+    def post(self, request, *args, **kwargs):
+        form = DetailForm(request.POST, request.FILES)
+        print(form)
 
 
 @login_required
@@ -57,7 +67,6 @@ def user_login(request):
         if user:
             print(user.is_active)
             if user.is_active:
-                print("helloo")
                 login(request,user)
                 return HttpResponseRedirect(reverse('index'))
 
